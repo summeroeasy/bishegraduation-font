@@ -61,64 +61,65 @@
 	};
 </script>
 <style lang="scss" scoped>
-	a {
-		text-decoration: none;
-		color: #555;
-	}
+a {
+    text-decoration: none;
+    color: #555;
+    &:hover {
+        background: #5CACEE; // 柔和的蓝色
+        color: #fff;
+    }
+}
 
-	a:hover {
-		background: #00c292;
-	}
+.nav-list {
+    width: 100%;
+    margin-top: 20px;
+    .nav-title {
+        display: block;
+        font-size: 16px;
+        color: #333;
+        padding: 15px 25px;
+        transition: background-color .3s, color .3s;
+    }
 
-	.nav-list {
-		width: 100%;
-		margin: 0 auto;
-		text-align: left;
-		margin-top: 20px;
+    .nav-title.active {
+        color: #5CACEE;
+        cursor: default;
+        background-color: #f0f4f7; // 淡蓝色的背景
+        border-left: 4px solid #5CACEE;
+    }
+}
 
-		.nav-title {
-			display: inline-block;
-			font-size: 15px;
-			color: #333;
-			padding: 15px 25px;
-			border: none;
-		}
+.nav-item {
+    background: #FFFFFF;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 
-		.nav-title.active {
-			color: #555;
-			cursor: default;
-			background-color: #fff;
-		}
-	}
+    .menu {
+        padding: 15px 25px;
+        &:hover {
+            background: #ebf5ff; // 非常淡的蓝色
+        }
+    }
+}
 
-	.nav-item {
-		margin-top: 20px;
-		background: #FFFFFF;
-		padding: 15px 0;
+.el-main {
+    background-color: #F6F8FA;
+    padding: 24px;
+    min-height: calc(100vh - 60px);
+}
 
-		.menu {
-			padding: 15px 25px;
-		}
-	}
+.router-view {
+    padding: 20px;
+    margin-top: 20px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-	.el-main {
-		background-color: #F6F8FA;
-		padding: 0 24px;
-		// padding-top: 60px;
-	}
-
-	.router-view {
-		padding: 10px;
-		margin-top: 10px;
-		background: #FFFFFF;
-		box-sizing: border-box;
-	}
-
-	.bread-crumbs {
-		width: 100%;
-		// border-bottom: 1px solid #e9eef3;
-		// border-top: 1px solid #e9eef3;
-		margin-top: 10px;
-		box-sizing: border-box;
-	}
+.bread-crumbs {
+    padding: 10px 25px;
+    background-color: #fff;
+    border-bottom: 1px solid #e9eef3;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
 </style>

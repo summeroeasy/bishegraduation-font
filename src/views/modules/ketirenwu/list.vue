@@ -811,6 +811,7 @@
             },
             // 下载
             download(file) {
+            console.log("${file}");
                 window.open(" ${file} ")
             },
             // 删除

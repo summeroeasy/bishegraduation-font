@@ -9,7 +9,7 @@ const base = {
     },
     getProjectName(){
         return {
-            projectName: "毕业设计系统"
+            projectName: "计算机学院毕业设计管理系统"
         } 
     }
 }

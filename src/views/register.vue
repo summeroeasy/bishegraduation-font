@@ -1,8 +1,8 @@
 <template>
-    <div style="backgroundImage: url('/biyeshejixitong/img/back-img-bg.jpg');background-size:cover;">
+    <div class="background">
         <div class="container">
-            <div class="login-form" style="backgroundColor:rgba(183, 174, 174, 0.5);borderRadius:22px">
-                <h1 class="h1" style="color:#000;fontSize:28px;">毕业设计系统注册</h1>
+            <div class="login-form">
+                <h1 >毕业设计系统注册</h1>
                 <el-form class="rgs-form" label-width="120px">
                         <el-form-item label="账号" class="input">
                             <el-input v-model="ruleForm.username" autocomplete="off" placeholder="账号"  />
@@ -146,243 +146,63 @@
     };
 </script>
 <style lang="scss" scoped>
-    .el-radio__input.is-checked .el-radio__inner {
-        border-color: #00c292;
-        background: #00c292;
-    }
-
-    .el-radio__input.is-checked .el-radio__inner {
-        border-color: #00c292;
-        background: #00c292;
-    }
-
-    .el-radio__input.is-checked .el-radio__inner {
-        border-color: #00c292;
-        background: #00c292;
-    }
-
-    .el-radio__input.is-checked+.el-radio__label {
-        color: #00c292;
-    }
-
-    .el-radio__input.is-checked+.el-radio__label {
-        color: #00c292;
-    }
-
-    .el-radio__input.is-checked+.el-radio__label {
-        color: #00c292;
-    }
-
-    .h1 {
-        margin-top: 10px;
-    }
-
-    body {
-        padding: 0;
-        margin: 0;
-    }
-
-    // .container {
-       //    min-height: 100vh;
-       //    text-align: center;
-       //    // background-color: #00c292;
-       //    padding-top: 20vh;
-       //    background-image: url(../assets/img/bg.jpg);
-       //    background-size: 100% 100%;
-       //    opacity: 0.9;
-       //  }
-
-    // .login-form:before {
-       // 	vertical-align: middle;
-       // 	display: inline-block;
-       // }
-
-    // .login-form {
-       // 	max-width: 500px;
-       // 	padding: 20px 0;
-       // 	width: 80%;
-       // 	position: relative;
-       // 	margin: 0 auto;
-
-    // 	.label {
-          // 		min-width: 60px;
-          // 	}
-
-    // 	.input-group {
-          // 		max-width: 500px;
-          // 		padding: 20px 0;
-          // 		width: 80%;
-          // 		position: relative;
-          // 		margin: 0 auto;
-          // 		display: flex;
-          // 		align-items: center;
-
-    // 		.input-container {
-              // 			display: inline-block;
-              // 			width: 100%;
-              // 			text-align: left;
-              // 			margin-left: 10px;
-              // 		}
-
-    // 		.icon {
-              // 			width: 30px;
-              // 			height: 30px;
-              // 		}
-
-    // 		.input {
-              // 			position: relative;
-              // 			z-index: 2;
-              // 			float: left;
-              // 			width: 100%;
-              // 			margin-bottom: 0;
-              // 			box-shadow: none;
-              // 			border-top: 0px solid #ccc;
-              // 			border-left: 0px solid #ccc;
-              // 			border-right: 0px solid #ccc;
-              // 			border-bottom: 1px solid #ccc;
-              // 			padding: 0px;
-              // 			resize: none;
-              // 			border-radius: 0px;
-              // 			display: block;
-              // 			width: 100%;
-              // 			height: 34px;
-              // 			padding: 6px 12px;
-              // 			font-size: 14px;
-              // 			line-height: 1.42857143;
-              // 			color: #555;
-              // 			background-color: #fff;
-              // 		}
-
-    // 	}
-    // }
-
-    .nk-navigation {
-        margin-top: 15px;
-
-    a {
-        display: inline-block;
-        color: #fff;
-        background: rgba(255, 255, 255, .2);
-        width: 100px;
-        height: 50px;
-        border-radius: 30px;
-        text-align: center;
+   .background {
         display: flex;
         align-items: center;
-        margin: 0 auto;
         justify-content: center;
-        padding: 0 20px;
-    }
-
-    .icon {
-        margin-left: 10px;
-        width: 30px;
-        height: 30px;
-    }
-    }
-
-    .register-container {
-        margin-top: 10px;
-
-    a {
-        display: inline-block;
-        color: #fff;
-        max-width: 500px;
-        height: 50px;
-        border-radius: 30px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        margin: 0 auto;
-        justify-content: center;
-        padding: 0 20px;
-
-    div {
-        margin-left: 10px;
-    }
-    }
+        height: 100vh;
+        background: url('/biyeshejixitong/img/back-img-bg.jpg') no-repeat center center;
+        background-size: cover;
     }
 
     .container {
-        height: 100vh;
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: auto;
+    }
 
     .login-form {
-        right: 50%;
-        top: 50%;
-        height: auto;
-        transform: translate3d(50%, -50%, 0);
-        border-radius: 10px;
-        background-color: rgba(255,255,255,.5);
-        width: 420px;
-        padding: 30px 30px 40px 30px;
-        font-size: 14px;
-        font-weight: 500;
+        width: 100%;
+        max-width: 500px;
+    }
 
-    .h1 {
-        margin: 0;
+    h1 {
         text-align: center;
-        line-height: 54px;
-        font-size: 24px;
-        color: #000;
+        color: #333;
+        margin-bottom: 20px;
     }
 
     .rgs-form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        .el-form-item {
+            margin-bottom: 1rem;
+        }
 
-    .input {
-        width: 100%;
+        .el-input__inner {
+            border-radius: 5px;
+        }
 
-    & /deep/ .el-form-item__label {
-          line-height: 40px;
-          color: rgba(17, 16, 16, 1);
-          font-size: #606266;
-      }
-
-    & /deep/ .el-input__inner {
-          height: 40px;
-          color: rgba(23, 24, 26, 1);
-          font-size: 14px;
-          border-width: 1px;
-          border-style: solid;
-          border-color: #606266;
-          border-radius: 22px;
-          background-color: #fff;
-      }
+        .el-button {
+            margin-top: 10px;
+            width: 100%;
+            border-radius: 5px;
+        }
     }
 
     .btn {
-        margin: 0 10px;
-        width: 88px;
-        height: 44px;
-        color: #fff;
-        font-size: 14px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: #409EFF;
-        border-radius: 22px;
         background-color: #409EFF;
+        color: white;
+        &:hover {
+            background-color: darken(#409EFF, 10%);
+        }
     }
 
     .close {
-        margin: 0 10px;
-        width: 88px;
-        height: 44px;
+        background-color: white;
         color: #409EFF;
-        font-size: 14px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: #409EFF;
-        border-radius: 22px;
-        background-color: #FFF;
-    }
-
-    }
-    }
+        &:hover {
+            background-color: #f2f2f2;
+        }
     }
 </style>
