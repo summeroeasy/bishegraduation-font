@@ -1,7 +1,9 @@
 <template>
 	<el-main>
 		<bread-crumbs :title="title" class="bread-crumbs"></bread-crumbs>
-		<router-view class="router-view"></router-view>
+		<router-view class="router-view">
+			
+		</router-view>
 	</el-main>
 </template>
 <script>

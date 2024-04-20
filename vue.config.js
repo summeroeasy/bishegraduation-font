@@ -3,7 +3,7 @@ const path = require('path')
 function resolve(dir) {
     return path.join(__dirname, dir)
 }
-function publicPath(){
+function publicPath() {
     if (process.env.NODE_ENV == 'production') {
         return "././";
     } else {
@@ -26,7 +26,7 @@ module.exports = {
             }
         }
     },
-lintOnSave: false,
+    lintOnSave: false,
     devServer: {
         host: "0.0.0.0", //指定使用一个 host。默认是 localhost，这里默认值即可
         port: 8081, //指定端口
@@ -40,24 +40,30 @@ lintOnSave: false,
                 pathRewrite: { // 在发出请求后将/api替换为''空值，这样不影响接口请求
                     '^/biyeshejixitong': ''
                 }
+            },
+            '/aliyuncs.com': {
+                target: 'https://graduationprojectmanager.oss-cn-beijing.aliyuncs.com',
+                changeOrigin: true,
+                secure: false,
+                pathRewrite: {'^/aliyuncs.com' : ''} // 确保删除请求 URL 中的 /aliyuncs.com 部分
             }
         }
     },
-chainWebpack(config) {
-    config.module
-      .rule('svg')
-      .exclude.add(resolve('src/icons'))
-      .end()
-    config.module
-      .rule('icons')
-      .test(/\.svg$/)
-      .include.add(resolve('src/icons'))
-      .end()
-      .use('svg-sprite-loader')
-      .loader('svg-sprite-loader')
-      .options({
-        symbolId: 'icon-[name]'
-      })
-      .end()
-}
+    chainWebpack(config) {
+        config.module
+            .rule('svg')
+            .exclude.add(resolve('src/icons'))
+            .end()
+        config.module
+            .rule('icons')
+            .test(/\.svg$/)
+            .include.add(resolve('src/icons'))
+            .end()
+            .use('svg-sprite-loader')
+            .loader('svg-sprite-loader')
+            .options({
+                symbolId: 'icon-[name]'
+            })
+            .end()
+    }
 }
